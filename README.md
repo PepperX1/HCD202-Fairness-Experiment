@@ -1,2 +1,4 @@
-# HCD202-Fairness-Experiment
-Fairness analysis of a student performance prediction model using Logistic Regression, focusing on potential gender bias.
+This project is a fairness experiment for the HCD-202 university assessment. The goal is to test whether a Logistic Regression model trained on student data treats male and female students equally when making academic performance predictions.
+The experiment uses a counterfactual method, where 200 student profiles are each tested twice with only the gender changed and everything else kept the same. This way, any difference in the model's prediction can be linked directly to gender.
+The dataset comes from Kaggle and contains around 1,000 student records with features like study hours, attendance, previous grades, and parental support. The model predicts whether a student is a high performer or low performer based on a median grade split.
+Results showed that gender did not change the final pass/fail prediction for any profile, but the predicted probability was consistently about 4.7% higher for female students across all 200 profiles. The gender feature also had the highest model coefficient, meaning it influenced predictions more than academic variables like previous grade or study hours.
